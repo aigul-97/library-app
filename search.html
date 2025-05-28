@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Іздеу нәтижесі</title>
+</head>
+<body>
+    <h1>🔍 Іздеу нәтижесі: "{{ query }}"</h1>
+    <a href="/">← Артқа</a>
+    <ul>
+        {% for title, author, year in books %}
+            <li>{{ title }} — {{ author }} ({{ year }})</li>
+        {% else %}
+            <li>Кітап табылмады.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

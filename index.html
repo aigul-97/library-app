@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Кітапхана</title>
+</head>
+<body>
+    <h1>📚 Кітапхана</h1>
+
+    <form action="/add" method="post">
+        <input name="title" placeholder="Кітап атауы" required>
+        <input name="author" placeholder="Автор" required>
+        <input name="year" placeholder="Жылы" required>
+        <button type="submit">Қосу</button>
+    </form>
+
+    <form action="/search" method="get">
+        <input name="q" placeholder="Іздеу...">
+        <button type="submit">Іздеу</button>
+    </form>
+
+    <h2>📖 Барлық кітаптар:</h2>
+    <ul>
+        {% for title, author, year in books %}
+            <li>{{ title }} — {{ author }} ({{ year }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
